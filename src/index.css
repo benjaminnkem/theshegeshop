@@ -1,13 +1,136 @@
+:root {
+  --light-mode-text-color: #333;
+  --primary-color: rgb(255, 89, 0);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--light-mode-text-color);
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul a {
+  margin-inline: 10px;
+}
+
+#logo {
+  color: var(--primary-color);
+}
+
+#nav__ {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 800px;
+  margin-inline: auto;
+
+  padding: 15px 0;
+}
+
+.view_cart_link {
+  position: relative;
+}
+
+.view_cart_link::after {
+  content: attr(data-items-added);
+  background-color: var(--primary-color);
+  font-weight: bold;
+  color: #fff;
+  padding: 4px;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  border-radius: 100%;
+  top: -10px;
+  right: -20px;
+
+  display: grid;
+  place-content: center;
+}
+
+/* Feed */
+#feed_content {
+  width: 800px;
+  margin-inline: auto;
+
+  padding: 20px;
+}
+
+#market__place__con {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+}
+
+.item__img {
+  height: 150px;
+  overflow: hidden;
+}
+
+.item__preview {
+  padding: 10px;
+  border: 1px rgba(128, 128, 128, 0.394) solid;
+  border-radius: 10px;
+  overflow: hidden;
+
+  transition: all 0.4s;
+  text-align: center;
+  align-self: start;
+}
+
+.item__preview:hover {
+  box-shadow: 1px 3px 5px rgba(92, 92, 92, 0.469);
+  cursor: pointer;
+}
+
+.item_seller {
+  padding: 10px 0;
+}
+
+.main_item__seller {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.buy__actions {
+  text-align: center;
+}
+
+.buy__actions button {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 50%;
+  border: none;
+  transition: all 0.4s;
+  background-color: rgb(185, 185, 185);
+  margin-inline: 10px;
+}
+
+.buy__actions button:first-of-type:hover {
+  background-color: rgb(1, 213, 1);
+}
+
+.buy__actions button:last-child:hover {
+  background-color: rgb(255, 77, 0);
 }
