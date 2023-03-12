@@ -1,4 +1,4 @@
-const Feed = ({ items, addItemToCart }) => {
+const Feed = ({items, addItemToCart}) => {
   return (
     <div id="feed__">
       <div id="feed_content">
@@ -10,10 +10,10 @@ const Feed = ({ items, addItemToCart }) => {
                   <img
                     src={item.imgSrc}
                     alt={item.itemName + " Image"}
-                    style={{ width: "100%", objectFit: "cover" }}
+                    style={{width: "100%", objectFit: "cover"}}
                   />
                 </div>
-                <div className="item__info" style={{ padding: "10px 0" }}>
+                <div className="item__info" style={{padding: "10px 0"}}>
                   <h3 className="item__name">{item.itemName}</h3>
                   <p className="item__desc">{item.desc}</p>
                   <p className="item__seller">
@@ -22,7 +22,10 @@ const Feed = ({ items, addItemToCart }) => {
                 </div>
 
                 <div className="buy__actions">
-                  <button title="Add" onClick={() => {addItemToCart(item)}}>+</button>
+                  <button title="Add" onClick={() => {
+                    addItemToCart(item)
+                  }}>+
+                  </button>
                   <button title="Remove">-</button>
                 </div>
               </div>

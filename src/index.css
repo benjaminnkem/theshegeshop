@@ -39,7 +39,7 @@ nav ul a {
   justify-content: space-between;
   align-items: center;
 
-  width: 800px;
+  width: 65%;
   margin-inline: auto;
 
   padding: 15px 0;
@@ -69,11 +69,14 @@ nav ul a {
 }
 
 /* Feed */
-#feed_content {
-  width: 800px;
+#body__con {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: .5rem;
+  width: 65%;
   margin-inline: auto;
 
-  padding: 20px;
+  margin-top: 40px;
 }
 
 #market__place__con {
@@ -89,7 +92,7 @@ nav ul a {
 
 .item__preview {
   padding: 10px;
-  border: 1px rgba(128, 128, 128, 0.394) solid;
+  border: 1px rgba(139, 139, 139, 0.552) solid;
   border-radius: 10px;
   overflow: hidden;
 
@@ -99,7 +102,7 @@ nav ul a {
 }
 
 .item__preview:hover {
-  box-shadow: 1px 3px 5px rgba(92, 92, 92, 0.469);
+  box-shadow: 1px 3px 5px rgba(70, 70, 70, 0.532);
   cursor: pointer;
 }
 
@@ -134,3 +137,20 @@ nav ul a {
 .buy__actions button:last-child:hover {
   background-color: rgb(255, 77, 0);
 }
+
+#side__panel {
+  padding: 10px;
+  border: 1px rgba(139, 139, 139, 0.552) solid;
+  border-radius: 10px;
+  overflow: hidden;
+
+  transition: all 0.4s;
+  text-align: center;
+  user-select: none;
+}
+
+#side__panel:hover {
+  box-shadow: 1px 3px 5px rgba(70, 70, 70, 0.532);
+  cursor: pointer;
+}
+/*  */

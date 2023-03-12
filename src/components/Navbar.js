@@ -14,7 +14,7 @@ const Navbar = ({ allItems }) => {
             <a href="/">Explore</a>
             <a href="/">Sign Up</a>
             <a href="/" className="view_cart_link" data-items-added={allItems}>
-              View Cart
+              Items
             </a>
             <a href="/">Login</a>
           </ul>
