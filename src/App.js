@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Feed from "./components/Feed";
 import Navbar from "./components/Navbar";
 import SidePanel from "./components/SidePanel";
@@ -62,10 +62,19 @@ function App() {
   ]);
 
   const [allItems, setAllItems] = useState([]);
+  const [multiKeyCheck, setMultiKeyCheck] = useState(true);
 
   function addItemToCart(item) {
-    setAllItems(() => [...allItems, item])
+    setAllItems(() => [...allItems, item]);
   }
+
+  useEffect(() => {
+    if (allItems.length >= 1)
+      allItems.forEach((item) => {
+        if (item.id === 1)
+          console.log("Multi key", item)
+      })
+  }, [allItems])
 
   return (
     <div id="main__con__con">

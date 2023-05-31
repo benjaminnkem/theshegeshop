@@ -1,15 +1,33 @@
 :root {
-  --light-mode-text-color: #333;
+  --text-color: #333;
+  --background-color: white;
   --primary-color: rgb(255, 89, 0);
+
+  --dark-text-color: #d8d4d7;
+  --dark-background-color: #0a070c;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+  }
+
+  a {
+    color: var(--dark-text-color);
+  }
 }
 
 * {
@@ -19,7 +37,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--light-mode-text-color);
+  color: var(--text-color);
 }
 
 nav ul {
@@ -72,7 +90,7 @@ nav ul a {
 #body__con {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  gap: .5rem;
+  gap: 0.5rem;
   width: 65%;
   margin-inline: auto;
 

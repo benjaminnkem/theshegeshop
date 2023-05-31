@@ -1,13 +1,4 @@
-import {useState} from "react";
-
-const SidePanel = ({ allItems }) => {
-
-  const [noItem, setNoItem] = useState(true);
-
-  if(allItems.length > 0) {
-    setNoItem(false);
-  }
-
+const SidePanel = ({allItems}) => {
   return (
     <div id="side__panel">
       <div>
@@ -21,11 +12,12 @@ const SidePanel = ({ allItems }) => {
         </h3>
 
         <div>
-          {!noItem && allItems.map((item) => {
+          {allItems.length < 1 && <div><p>No Items added</p></div>}
+          {allItems.length >= 1 && allItems.map((item) => {
             return (
               <div className="__item__in__cart" key={item.id}>
                 <div className="__item__in__cart__pre">
-                  <p>{ item.itemName }</p>
+                  <p>{item.itemName}</p>
                 </div>
               </div>
             );

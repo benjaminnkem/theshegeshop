@@ -4,7 +4,7 @@ const Navbar = ({ allItems }) => {
       <div id="nav__">
         <h1 id="logo">
           THE SHEGE SHOP
-          <span style={{ display: "block", fontSize: "12px", color: "#333" }}>
+          <span style={{ display: "block", fontSize: "12px", color: "#959595" }}>
             BY BENJAMIN NKEM
           </span>
         </h1>
